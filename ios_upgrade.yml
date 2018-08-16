@@ -1,0 +1,37 @@
+email_recipient: brandon@brandonsjames.com
+# specify how many devices to upgrade at a single time (note, this is also the number of threads spawned at runtime)
+threads: 1
+# disruptive parts of the script will run at this time, leave blank to run immediately. Format HH:MM
+change_time: '23:00'
+# if set to true, the new image will copied to the device prior to the change
+pre_copy: True
+# default settings that may be overridden on a per device basis
+default:
+  # directory storing the IOS image
+  remote_directory: http://192.168.0.113/
+  # full IOS/NXOS filename (ie c3560cx-universalk9-mz.152-4.E4.bin)
+  image_name: c2960-lanlitek9-mz.122-55.SE12.bin
+  # md5 may be left blank to skip verification
+  image_md5: 1ac4728753bb11ad6f22fd8f54763f8e
+  # if true, invalid confregs will be set to 0x2102. Otherwise an exception will be raised. 
+  fix_confreg: True
+  # if true, device will be reloaded (or software install command will be ran). If false code will only be copied
+  install: True
+  # maximum amount of time to wait (in seconds) before throwing an exception after reload command has been issued
+  reload_max_time: 24000
+  # some device images may not support the reload /verify command. It can be disabled here.
+  reload_verify: False
+  # perform a shelf reload for dual SUP devices in RPR mode
+  reload_shelf_rpr: False
+  # acceptable confreg settings
+  confreg:
+  - '0xF'
+  - '0x2102'
+  - '0x102'
+# list devices and device specific config
+target_devices:
+ - hostname: 192.168.0.150
+   image_name: c2960-lanlitek9-mz.150-2.SE11.bin
+   image_md5: 885ed3dd7278baa11538a51827c2c9f8
+ - hostname: 192.168.0.11
+
