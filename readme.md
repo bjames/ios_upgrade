@@ -12,12 +12,12 @@
 - change_time: The time the update should take place. If this time has already passed, then the script waits until the same time on the next day. The script can be sent to the background and then disowned (if you would like close the SSH session) or left running in the foreground.
 - default: These are the default device settings. Any settings defined here can be overridden in the target_device list
 - target_devices: A list of hostnames or IP addresses. Default settings may be overridden as follows:
-
+```
     - 192.168.1.1 # this device only uses default settings
     - 192.168.0.1 # this device overrides default settings
       image_name: c2960-lanlitek9-mz.150-2.SE11.bin
       image_md5: 885ed3dd7278baa11538a51827c2c9f8
-
+```
 
 **Submodules**
 
