@@ -21,6 +21,6 @@
 
 **Submodules**
 
-smtp_relay: Contains functions related to sending emails, supports anonymous smtp relay
-ios_facts: Gathers information about IOS devices and stores them in a dictionary
+- smtp_relay: Contains functions related to sending emails, supports anonymous smtp relay
+- ios_facts: Gathers information about IOS devices and stores them in a dictionary
 
