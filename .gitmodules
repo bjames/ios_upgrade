@@ -1,0 +1,6 @@
+[submodule "ios_facts"]
+	path = ios_facts
+	url = git@github.com:bjames/ios_facts.git
+[submodule "smtp_relay"]
+	path = smtp_relay
+	url = git@github.com:bjames/smtp_relay.git
